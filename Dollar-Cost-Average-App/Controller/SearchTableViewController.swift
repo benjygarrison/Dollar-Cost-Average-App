@@ -9,6 +9,8 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
     
+//MARK: When building own app: remember to adjust contraints on tableView cell items, link the class of the SearchTableViewController ("Custom CLass") to the cellID, and set the cell identifier!
+    
     private lazy var searchController: UISearchController = {
         let sController = UISearchController(searchResultsController: nil)
         sController.searchResultsUpdater = self

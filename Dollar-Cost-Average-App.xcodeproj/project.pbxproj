@@ -16,6 +16,7 @@
 		BAC03318278A567200A73426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC03316278A567200A73426 /* LaunchScreen.storyboard */; };
 		BAC03320278A56B300A73426 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BAC0331F278A56B300A73426 /* Podfile */; };
 		BAC03324278A667400A73426 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03323278A667400A73426 /* SearchTableViewCell.swift */; };
+		BAC03327278A6B3100A73426 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03326278A6B3100A73426 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BAC03319278A567200A73426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAC0331F278A56B300A73426 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		BAC03323278A667400A73426 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		BAC03326278A6B3100A73426 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C51892A3450F9929E40552C1 /* Pods-Dollar-Cost-Average-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dollar-Cost-Average-App.release.xcconfig"; path = "Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App.release.xcconfig"; sourceTree = "<group>"; };
 		DFE8162D03EF3CF3DC9FA275 /* Pods_Dollar_Cost_Average_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dollar_Cost_Average_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 		BAC0330A278A566F00A73426 /* Dollar-Cost-Average-App */ = {
 			isa = PBXGroup;
 			children = (
+				BAC03325278A6B1100A73426 /* Service */,
 				BAC03322278A662B00A73426 /* Controller */,
 				BAC03321278A661200A73426 /* View */,
 				BAC0330B278A566F00A73426 /* AppDelegate.swift */,
@@ -111,6 +114,14 @@
 				BAC0330F278A566F00A73426 /* SearchTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BAC03325278A6B1100A73426 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BAC03326278A6B3100A73426 /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAC03310278A566F00A73426 /* SearchTableViewController.swift in Sources */,
+				BAC03327278A6B3100A73426 /* APIService.swift in Sources */,
 				BAC03324278A667400A73426 /* SearchTableViewCell.swift in Sources */,
 				BAC0330C278A566F00A73426 /* AppDelegate.swift in Sources */,
 				BAC0330E278A566F00A73426 /* SceneDelegate.swift in Sources */,
