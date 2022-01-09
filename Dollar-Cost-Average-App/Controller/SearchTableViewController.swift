@@ -12,6 +12,11 @@ class SearchTableViewController: UITableViewController {
     
 //MARK: When building own app: remember to adjust contraints on tableView cell items, link the class of the SearchTableViewController ("Custom CLass") to the cellID, and set the cell identifier!
     
+    private enum Mode {
+        case onboarding
+        case search
+    }
+    
     private lazy var searchController: UISearchController = {
         let sController = UISearchController(searchResultsController: nil)
         sController.searchResultsUpdater = self
@@ -24,14 +29,18 @@ class SearchTableViewController: UITableViewController {
     
     private let apiService = APIService()
     private var searchResults: SearchResults?
-    private var subscribers = Set<AnyCancellable>() //observer to publisher
-    @Published private var searchQuery = String()  // @Published makes the search query observable
+    @Published private var mode: Mode = .onboarding // $ sets the listener
+    private var subscribers = Set<AnyCancellable>() // listener for var below
+    @Published private var searchQuery = String()  // @Published makes the search query observable, $ sets the listener
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         establishNavBar()
         observeFormText()
+        //establishTableView()
         
     }
     
@@ -41,10 +50,16 @@ class SearchTableViewController: UITableViewController {
         navigationItem.searchController = searchController
     }
     
+    
+//    private func establishTableView() {
+//        tableView.tableFooterView = UIView()
+//    }
+    
+    
     private func observeFormText() {
         
-        $searchQuery.debounce(for: .milliseconds(500), scheduler: RunLoop.main).sink { (searchQuery) in
-            self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { [unowned self] (completion) in
+        $searchQuery.debounce(for: .milliseconds(500), scheduler: RunLoop.main).sink { [unowned self] (searchQuery) in
+            self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
                 switch completion {
                 case .failure(let error):
                     print(error.localizedDescription)
@@ -57,6 +72,18 @@ class SearchTableViewController: UITableViewController {
             print(searchQuery)
         }.store(in: &subscribers)
         //debounce creates a small lag, to slow the API a but in case of fast typers
+        
+        $mode.sink { [unowned self] (mode) in
+            switch mode {
+            case .onboarding:
+                let greyView = UIView()
+                greyView.backgroundColor = .gray
+                self.tableView.backgroundView = greyView
+            case .search:
+                self.tableView.backgroundColor = nil
+            }
+        }.store(in: &subscribers)
+        
     }
     
     
@@ -80,11 +107,17 @@ class SearchTableViewController: UITableViewController {
 
 extension SearchTableViewController : UISearchResultsUpdating, UISearchControllerDelegate {
     
-func updateSearchResults(for searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
     
-    guard let searchQuery = searchController.searchBar.text, !searchQuery.isEmpty else { return }
+        guard let searchQuery = searchController.searchBar.text, !searchQuery.isEmpty else { return }
     
-    self.searchQuery = searchQuery
+        self.searchQuery = searchQuery
     
     }
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+        mode = .search
+    }
+    
+    
 }
