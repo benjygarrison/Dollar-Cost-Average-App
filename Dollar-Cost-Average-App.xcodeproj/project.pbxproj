@@ -1,0 +1,439 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9226F3E4964B38620765F18E /* Pods_Dollar_Cost_Average_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFE8162D03EF3CF3DC9FA275 /* Pods_Dollar_Cost_Average_App.framework */; };
+		BAC0330C278A566F00A73426 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0330B278A566F00A73426 /* AppDelegate.swift */; };
+		BAC0330E278A566F00A73426 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0330D278A566F00A73426 /* SceneDelegate.swift */; };
+		BAC03310278A566F00A73426 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0330F278A566F00A73426 /* SearchTableViewController.swift */; };
+		BAC03313278A566F00A73426 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC03311278A566F00A73426 /* Main.storyboard */; };
+		BAC03315278A567200A73426 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC03314278A567200A73426 /* Assets.xcassets */; };
+		BAC03318278A567200A73426 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC03316278A567200A73426 /* LaunchScreen.storyboard */; };
+		BAC03320278A56B300A73426 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BAC0331F278A56B300A73426 /* Podfile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B178E14332EA329BACD78E1 /* Pods-Dollar-Cost-Average-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dollar-Cost-Average-App.debug.xcconfig"; path = "Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App.debug.xcconfig"; sourceTree = "<group>"; };
+		BAC03308278A566F00A73426 /* Dollar-Cost-Average-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dollar-Cost-Average-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC0330B278A566F00A73426 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAC0330D278A566F00A73426 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BAC0330F278A566F00A73426 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		BAC03312278A566F00A73426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAC03314278A567200A73426 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAC03317278A567200A73426 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAC03319278A567200A73426 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAC0331F278A56B300A73426 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C51892A3450F9929E40552C1 /* Pods-Dollar-Cost-Average-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dollar-Cost-Average-App.release.xcconfig"; path = "Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App.release.xcconfig"; sourceTree = "<group>"; };
+		DFE8162D03EF3CF3DC9FA275 /* Pods_Dollar_Cost_Average_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dollar_Cost_Average_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAC03305278A566F00A73426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9226F3E4964B38620765F18E /* Pods_Dollar_Cost_Average_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4583F1F6A31491795AD39B71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B178E14332EA329BACD78E1 /* Pods-Dollar-Cost-Average-App.debug.xcconfig */,
+				C51892A3450F9929E40552C1 /* Pods-Dollar-Cost-Average-App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		710F13159E84612B926C73A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFE8162D03EF3CF3DC9FA275 /* Pods_Dollar_Cost_Average_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BAC032FF278A566F00A73426 = {
+			isa = PBXGroup;
+			children = (
+				BAC0331F278A56B300A73426 /* Podfile */,
+				BAC0330A278A566F00A73426 /* Dollar-Cost-Average-App */,
+				BAC03309278A566F00A73426 /* Products */,
+				4583F1F6A31491795AD39B71 /* Pods */,
+				710F13159E84612B926C73A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BAC03309278A566F00A73426 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAC03308278A566F00A73426 /* Dollar-Cost-Average-App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAC0330A278A566F00A73426 /* Dollar-Cost-Average-App */ = {
+			isa = PBXGroup;
+			children = (
+				BAC0330B278A566F00A73426 /* AppDelegate.swift */,
+				BAC0330D278A566F00A73426 /* SceneDelegate.swift */,
+				BAC0330F278A566F00A73426 /* SearchTableViewController.swift */,
+				BAC03311278A566F00A73426 /* Main.storyboard */,
+				BAC03314278A567200A73426 /* Assets.xcassets */,
+				BAC03316278A567200A73426 /* LaunchScreen.storyboard */,
+				BAC03319278A567200A73426 /* Info.plist */,
+			);
+			path = "Dollar-Cost-Average-App";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAC03307278A566F00A73426 /* Dollar-Cost-Average-App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAC0331C278A567200A73426 /* Build configuration list for PBXNativeTarget "Dollar-Cost-Average-App" */;
+			buildPhases = (
+				E7262AB76EB042189A1A5F6B /* [CP] Check Pods Manifest.lock */,
+				BAC03304278A566F00A73426 /* Sources */,
+				BAC03305278A566F00A73426 /* Frameworks */,
+				BAC03306278A566F00A73426 /* Resources */,
+				C3BCDEA97CBB2EF2AE62520B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dollar-Cost-Average-App";
+			productName = "Dollar-Cost-Average-App";
+			productReference = BAC03308278A566F00A73426 /* Dollar-Cost-Average-App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAC03300278A566F00A73426 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					BAC03307278A566F00A73426 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = BAC03303278A566F00A73426 /* Build configuration list for PBXProject "Dollar-Cost-Average-App" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAC032FF278A566F00A73426;
+			productRefGroup = BAC03309278A566F00A73426 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAC03307278A566F00A73426 /* Dollar-Cost-Average-App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAC03306278A566F00A73426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAC03318278A567200A73426 /* LaunchScreen.storyboard in Resources */,
+				BAC03315278A567200A73426 /* Assets.xcassets in Resources */,
+				BAC03320278A56B300A73426 /* Podfile in Resources */,
+				BAC03313278A566F00A73426 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C3BCDEA97CBB2EF2AE62520B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7262AB76EB042189A1A5F6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dollar-Cost-Average-App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAC03304278A566F00A73426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAC03310278A566F00A73426 /* SearchTableViewController.swift in Sources */,
+				BAC0330C278A566F00A73426 /* AppDelegate.swift in Sources */,
+				BAC0330E278A566F00A73426 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BAC03311278A566F00A73426 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAC03312278A566F00A73426 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAC03316278A567200A73426 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAC03317278A567200A73426 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAC0331A278A567200A73426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAC0331B278A567200A73426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAC0331D278A567200A73426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B178E14332EA329BACD78E1 /* Pods-Dollar-Cost-Average-App.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UC8QT6XYPN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dollar-Cost-Average-App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "benjigarrison.Dollar-Cost-Average-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAC0331E278A567200A73426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C51892A3450F9929E40552C1 /* Pods-Dollar-Cost-Average-App.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UC8QT6XYPN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Dollar-Cost-Average-App/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "benjigarrison.Dollar-Cost-Average-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAC03303278A566F00A73426 /* Build configuration list for PBXProject "Dollar-Cost-Average-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC0331A278A567200A73426 /* Debug */,
+				BAC0331B278A567200A73426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAC0331C278A567200A73426 /* Build configuration list for PBXNativeTarget "Dollar-Cost-Average-App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC0331D278A567200A73426 /* Debug */,
+				BAC0331E278A567200A73426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BAC03300278A566F00A73426 /* Project object */;
+}
