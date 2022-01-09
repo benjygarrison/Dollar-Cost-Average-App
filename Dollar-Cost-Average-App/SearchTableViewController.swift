@@ -11,14 +11,31 @@ class SearchTableViewController: UITableViewController {
     
     private lazy var searchController: UISearchController = {
         let sController = UISearchController(searchResultsController: nil)
+        sController.searchResultsUpdater = self
+        sController.delegate = self
+        sController.obscuresBackgroundDuringPresentation = false
+        sController.searchBar.placeholder = "Enter a company name or symbol"
+        sController.searchBar.autocapitalizationType = .allCharacters
         return sController
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        establishNavBar()
+        
+    }
+    
+    private func establishNavBar() {
+        navigationItem.searchController = searchController
     }
 
 
 }
 
+extension SearchTableViewController : UISearchResultsUpdating, UISearchControllerDelegate {
+    
+func updateSearchResults(for searchController: UISearchController) {
+   
+    }
+}
