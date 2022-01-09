@@ -294,7 +294,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2yj-il-Ett">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2yj-il-Ett">
                                                     <rect key="frame" x="16" y="8" width="382" height="184"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="4Qn-JQ-Ofd">
@@ -331,7 +331,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-aA-MiY">
-                                                            <rect key="frame" x="0.0" y="46" width="382" height="46"/>
+                                                            <rect key="frame" x="0.0" y="54" width="382" height="46"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Monthly dollar cost averaging amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75x-5K-ji1">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
@@ -364,7 +364,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="O4L-jE-9Yl">
-                                                            <rect key="frame" x="0.0" y="92" width="382" height="92"/>
+                                                            <rect key="frame" x="0.0" y="108" width="382" height="76"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the initial date of investment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="72z-ed-cCy">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
@@ -395,7 +395,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QFT-JK-sMO">
-                                                                    <rect key="frame" x="-2" y="42" width="386" height="51"/>
+                                                                    <rect key="frame" x="-2" y="42" width="386" height="35"/>
                                                                 </slider>
                                                             </subviews>
                                                         </stackView>
