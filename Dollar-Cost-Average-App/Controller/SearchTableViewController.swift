@@ -11,6 +11,8 @@ import Combine
 class SearchTableViewController: UITableViewController {
     
 //MARK: When building own app: remember to adjust contraints on tableView cell items, link the class of the SearchTableViewController ("Custom CLass") to the cellID, and set the cell identifier!
+//MARK: To add animation using cocoapods, see section 4.12
+    
     
     private enum Mode {
         case onboarding
@@ -72,7 +74,7 @@ class SearchTableViewController: UITableViewController {
             }.store(in: &self.subscribers)
             print(searchQuery)
         }.store(in: &subscribers)
-        //debounce creates a small lag, to slow the API a but in case of fast typers
+        //debounce creates a small lag, to slow the API call a bit in case of fast typers
         
         $mode.sink { [unowned self] (mode) in
             switch mode {
