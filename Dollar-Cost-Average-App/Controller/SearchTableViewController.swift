@@ -23,14 +23,15 @@ class SearchTableViewController: UITableViewController {
     }()
     
     private let apiService = APIService()
-    private var subscribers = Set<AnyCancellable>()
-    
+    private var subscribers = Set<AnyCancellable>() //observer to publisher
+    @Published private var searchQuery = String()  // @Published makes the search query observable
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         establishNavBar()
-        performSearch()
+        observeFormText()
+        //performSearch()
         
     }
     
@@ -40,16 +41,26 @@ class SearchTableViewController: UITableViewController {
         navigationItem.searchController = searchController
     }
     
-    private func performSearch() {
-        apiService.fetchSymbolsPublisher(keywords: "S&P500").sink { (completion) in
-            switch completion {
-            case .failure(let error):
-                print(error.localizedDescription)
-            case .finished: break
-            }
-        } receiveValue: { (searchResults) in
-            print(searchResults)
+    private func observeFormText() {
+        
+        $searchQuery.debounce(for: .milliseconds(500), scheduler: RunLoop.main).sink { (searchQuery) in
+            self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { [unowned self] (completion) in
+                switch completion {
+                case .failure(let error):
+                    print(error.localizedDescription)
+                case .finished: break
+                }
+            } receiveValue: { (searchResults) in
+                print(searchResults)
+            }.store(in: &self.subscribers)
+            print(searchQuery)
         }.store(in: &subscribers)
+        //debounce creates a small lag, to slow the API a but in case of fast typers
+    }
+    
+    
+    private func performSearch() {
+
 
     }
     
@@ -69,6 +80,10 @@ class SearchTableViewController: UITableViewController {
 extension SearchTableViewController : UISearchResultsUpdating, UISearchControllerDelegate {
     
 func updateSearchResults(for searchController: UISearchController) {
-   
+    
+    guard let searchQuery = searchController.searchBar.text, !searchQuery.isEmpty else { return }
+    
+    self.searchQuery = searchQuery
+    
     }
 }
