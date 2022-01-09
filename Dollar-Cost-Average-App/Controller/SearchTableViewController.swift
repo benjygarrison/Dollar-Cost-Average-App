@@ -40,7 +40,7 @@ class SearchTableViewController: UITableViewController {
         
         establishNavBar()
         observeFormText()
-        //establishTableView()
+        establishTableView()
         
     }
     
@@ -48,12 +48,13 @@ class SearchTableViewController: UITableViewController {
     
     private func establishNavBar() {
         navigationItem.searchController = searchController
+        navigationItem.title = "Search"
     }
     
     
-//    private func establishTableView() {
-//        tableView.tableFooterView = UIView()
-//    }
+    private func establishTableView() {
+        tableView.tableFooterView = UIView()
+    }
     
     
     private func observeFormText() {
@@ -76,11 +77,9 @@ class SearchTableViewController: UITableViewController {
         $mode.sink { [unowned self] (mode) in
             switch mode {
             case .onboarding:
-                let greyView = UIView()
-                greyView.backgroundColor = .gray
-                self.tableView.backgroundView = greyView
+                self.tableView.backgroundView = SearchPlaceholderView()
             case .search:
-                self.tableView.backgroundColor = nil
+                self.tableView.backgroundColor = .systemBackground
             }
         }.store(in: &subscribers)
         
