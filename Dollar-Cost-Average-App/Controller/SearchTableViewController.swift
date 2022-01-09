@@ -23,6 +23,7 @@ class SearchTableViewController: UITableViewController {
     }()
     
     private let apiService = APIService()
+    private var searchResults: SearchResults?
     private var subscribers = Set<AnyCancellable>() //observer to publisher
     @Published private var searchQuery = String()  // @Published makes the search query observable
     
@@ -31,7 +32,6 @@ class SearchTableViewController: UITableViewController {
         
         establishNavBar()
         observeFormText()
-        //performSearch()
         
     }
     
@@ -51,7 +51,8 @@ class SearchTableViewController: UITableViewController {
                 case .finished: break
                 }
             } receiveValue: { (searchResults) in
-                print(searchResults)
+                self.searchResults = searchResults
+                self.tableView.reloadData()
             }.store(in: &self.subscribers)
             print(searchQuery)
         }.store(in: &subscribers)
@@ -59,22 +60,22 @@ class SearchTableViewController: UITableViewController {
     }
     
     
-    private func performSearch() {
-
-
-    }
-    
-    
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        return searchResults?.items.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! SearchTableViewCell
+        
+        if let searchResults = self.searchResults {
+            let searchResult = searchResults.items[indexPath.row]
+            cell.configure(with: searchResult)
+        }
         return cell
     }
 
+    
 }
 
 extension SearchTableViewController : UISearchResultsUpdating, UISearchControllerDelegate {
