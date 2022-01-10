@@ -17,10 +17,11 @@ class CalculatorTableViewController: UITableViewController {
     @IBOutlet weak var initialInvestmentAmountTextField: UITextField!
     @IBOutlet weak var monthlyDCATextField: UITextField!
     @IBOutlet weak var initialDateOfInvestmentTextField: UITextField!
+    @IBOutlet weak var dateSlider: UISlider!
     
     @Published private var initialInvestmentAmount: Int?
     @Published private var monthlyDCA: Int?
-    //@Published private var inititalDateOfInvestment
+    @Published private var initialDateOfInvestment: Int?
     
     private var subscribers = Set<AnyCancellable>()
     
@@ -31,6 +32,7 @@ class CalculatorTableViewController: UITableViewController {
         super.viewDidLoad()
         setupViews()
         setupTextFields()
+        setupDateSlider()
         observeForm()
     }
     
@@ -50,7 +52,23 @@ class CalculatorTableViewController: UITableViewController {
         initialDateOfInvestmentTextField.delegate = self
     }
     
+    private func setupDateSlider() {
+        if let count = asset?.timeSeriesMonthlyAdjusted.getMonthInfo().count {
+            let dateSliderCount = count - 1
+            dateSlider.maximumValue = dateSliderCount.floatValue
+        }
+    }
+    
     private func observeForm() {
+        $initialDateOfInvestment.sink { [weak self] (index) in
+            guard let index = index else { return }
+            self?.dateSlider.value = index.floatValue
+            
+            if let dateString = self?.asset?.timeSeriesMonthlyAdjusted.getMonthInfo()[index].date.MMYYFormat {
+                self?.initialDateOfInvestmentTextField.text = dateString
+            }
+        }.store(in: &subscribers)
+        
         NotificationCenter.default.publisher(for: UITextField.textDidChangeNotification, object: initialInvestmentAmountTextField).compactMap({
             ($0.object as? UITextField)?.text
         }).sink { [weak self] (text) in
@@ -65,8 +83,8 @@ class CalculatorTableViewController: UITableViewController {
             print("\(text)")
         }.store(in: &subscribers)
         
-        Publishers.CombineLatest($initialInvestmentAmount, $monthlyDCA).sink { (initialInvestmentAmount, monthlyDCA) in
-            print()
+        Publishers.CombineLatest3($initialInvestmentAmount, $monthlyDCA, $initialDateOfInvestment).sink { (initialInvestmentAmount, monthlyDCA, initialDateOfInvestment) in
+            print("\(String(describing: initialInvestmentAmount)), \(String(describing: monthlyDCA)), \(String(describing: initialDateOfInvestment))")
         }.store(in: &subscribers)
         
     }
@@ -93,6 +111,11 @@ class CalculatorTableViewController: UITableViewController {
     }
     
     
+    @IBAction func dateSlderDidChange(_ sender: UISlider) {
+        initialDateOfInvestment = Int(sender.value)
+        print(sender.value)
+    }
+    
 }
 
 extension CalculatorTableViewController: UITextFieldDelegate {
@@ -101,8 +124,9 @@ extension CalculatorTableViewController: UITextFieldDelegate {
         
         if textField == initialDateOfInvestmentTextField {
             performSegue(withIdentifier: "showInitialDate", sender: asset?.timeSeriesMonthlyAdjusted)
+            return false
         }
-        return false
+        return true
     }
     
 }
