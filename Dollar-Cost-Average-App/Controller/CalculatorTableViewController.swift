@@ -11,6 +11,12 @@ import Combine
 
 class CalculatorTableViewController: UITableViewController {
     
+    
+    @IBOutlet weak var currentValueLabel: UILabel!
+    @IBOutlet weak var investmentAmountLabel: UILabel!
+    @IBOutlet weak var gainLabel: UILabel!
+    @IBOutlet weak var yieldLabel: UILabel!
+    @IBOutlet weak var annualReturnLabel: UILabel!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var assetNameLabel: UILabel!
     @IBOutlet var currencyLabels: [UILabel]!
@@ -24,7 +30,7 @@ class CalculatorTableViewController: UITableViewController {
     @Published private var initialDateOfInvestment: Int?
     
     private var subscribers = Set<AnyCancellable>()
-    
+    private let dcaService = DCAService()
     
     var asset: Asset?
     
@@ -83,13 +89,22 @@ class CalculatorTableViewController: UITableViewController {
             print("\(text)")
         }.store(in: &subscribers)
         
-        Publishers.CombineLatest3($initialInvestmentAmount, $monthlyDCA, $initialDateOfInvestment).sink { (initialInvestmentAmount, monthlyDCA, initialDateOfInvestment) in
-            print("\(String(describing: initialInvestmentAmount)), \(String(describing: monthlyDCA)), \(String(describing: initialDateOfInvestment))")
+        Publishers.CombineLatest3($initialInvestmentAmount, $monthlyDCA, $initialDateOfInvestment).sink { [weak self] (initialInvestmentAmount, monthlyDCA, initialDateOfInvestment) in
+            
+            guard let initialInvestmentAmount = initialInvestmentAmount, let monthlyDCA = monthlyDCA, let initialDateOfInvestment = initialDateOfInvestment else { return }
+
+            
+            let result = self?.dcaService.calculate(initialInvestmentAmount: initialInvestmentAmount.doubleValue, monthlyDCA: monthlyDCA.doubleValue, initialDateOfInvestment: initialDateOfInvestment)
+            
+            self?.currentValueLabel.text = result?.currentValue.stringValue
+            self?.investmentAmountLabel.text = result?.investmentAmount.stringValue
+            self?.gainLabel.text = result?.gain.stringValue
+            self?.yieldLabel.text = result?.yield.stringValue
+            self?.annualReturnLabel.text = result?.annualReturn.stringValue
+    
         }.store(in: &subscribers)
         
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showInitialDate", let dateSelectionTableViewController = segue.destination as? DateSelectionTableViewController, let timeSeriesMonthlyAdjusted = sender as? TimeSeriesMonthlyAdjusted {

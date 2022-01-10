@@ -26,6 +26,8 @@
 		BAC03339278BE0DD00A73426 /* DateSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03338278BE0DD00A73426 /* DateSelectionTableViewController.swift */; };
 		BAC0333B278BEC1600A73426 /* Date+ Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0333A278BEC1600A73426 /* Date+ Extensions.swift */; };
 		BAC0333D278BF44C00A73426 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0333C278BF44C00A73426 /* Int+Extensions.swift */; };
+		BAC0333F278C147C00A73426 /* DCAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0333E278C147C00A73426 /* DCAService.swift */; };
+		BAC03341278C185E00A73426 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03340278C185E00A73426 /* Double+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		BAC03338278BE0DD00A73426 /* DateSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewController.swift; sourceTree = "<group>"; };
 		BAC0333A278BEC1600A73426 /* Date+ Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ Extensions.swift"; sourceTree = "<group>"; };
 		BAC0333C278BF44C00A73426 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		BAC0333E278C147C00A73426 /* DCAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAService.swift; sourceTree = "<group>"; };
+		BAC03340278C185E00A73426 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		C51892A3450F9929E40552C1 /* Pods-Dollar-Cost-Average-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dollar-Cost-Average-App.release.xcconfig"; path = "Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App.release.xcconfig"; sourceTree = "<group>"; };
 		DFE8162D03EF3CF3DC9FA275 /* Pods_Dollar_Cost_Average_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dollar_Cost_Average_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				BAC03326278A6B3100A73426 /* APIService.swift */,
+				BAC0333E278C147C00A73426 /* DCAService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				BAC03336278BDAD900A73426 /* UITextField+Extensions.swift */,
 				BAC0333A278BEC1600A73426 /* Date+ Extensions.swift */,
 				BAC0333C278BF44C00A73426 /* Int+Extensions.swift */,
+				BAC03340278C185E00A73426 /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,7 +295,9 @@
 				BAC03334278BC01800A73426 /* Asset.swift in Sources */,
 				BAC03327278A6B3100A73426 /* APIService.swift in Sources */,
 				BAC03330278B8B3E00A73426 /* TimeSeriesMonthlyAdjusted.swift in Sources */,
+				BAC0333F278C147C00A73426 /* DCAService.swift in Sources */,
 				BAC03324278A667400A73426 /* SearchTableViewCell.swift in Sources */,
+				BAC03341278C185E00A73426 /* Double+Extensions.swift in Sources */,
 				BAC0330C278A566F00A73426 /* AppDelegate.swift in Sources */,
 				BAC03339278BE0DD00A73426 /* DateSelectionTableViewController.swift in Sources */,
 				BAC03332278BBF4E00A73426 /* CalculatorTableViewController.swift in Sources */,
