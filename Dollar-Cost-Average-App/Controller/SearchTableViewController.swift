@@ -110,6 +110,7 @@ class SearchTableViewController: UITableViewController {
             let symbol = searchResult.symbol
             handleSelection(for: symbol, searchResult: searchResult)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     private func handleSelection(for symbol: String, searchResult: SearchResult) {
