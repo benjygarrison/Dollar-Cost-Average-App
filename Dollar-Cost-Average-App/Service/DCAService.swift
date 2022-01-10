@@ -6,17 +6,39 @@
 //
 
 import Foundation
+import UIKit
 
 struct DCAService {
     
-    func calculate(initialInvestmentAmount: Double, monthlyDCA: Double, initialDateOfInvestment: Int) -> DCAresult {
+    func calculate(asset: Asset, initialInvestmentAmount: Double, monthlyDCA: Double, initialDateOfInvestment: Int) -> DCAresult {
         
         let investmentAmount = getInvestmentAmount(initialInvestmentAmount: initialInvestmentAmount, monthlyDCA: monthlyDCA, initialDateOfInvestment: initialDateOfInvestment)
         
-        return .init(currentValue: 0, investmentAmount: investmentAmount, gain: 0, yield: 0, annualReturn: 0)
+        let latestSharePrice = getLatestSharePrice(asset: asset)
+        
+        let numberOfShares = getNumberOfShares(asset: asset, initialInvestmentAmount: initialInvestmentAmount, monthlyDCA: monthlyDCA, initialDateOfInvestment: initialDateOfInvestment)
+        
+        let currentValue = getCurrentValue(numberOfShares: numberOfShares, latestSharePrice: latestSharePrice)
+        
+        let isProfitable = currentValue > investmentAmount
+        
+        let gain = currentValue - investmentAmount
+        
+        let yield = gain / investmentAmount
+        
+        let annualReturn = getAnnualReturn(currentValue: currentValue, investmentAmount: investmentAmount, initialDateOfInvestment: initialDateOfInvestment)
+        
+        return .init(currentValue: currentValue,
+                     investmentAmount: investmentAmount,
+                     gain: gain,
+                     yield: yield,
+                     annualReturn: annualReturn,
+                     isProfitable: isProfitable)
     }
     
-    private func getInvestmentAmount(initialInvestmentAmount: Double, monthlyDCA: Double, initialDateOfInvestment: Int) -> Double {
+    private func getInvestmentAmount(initialInvestmentAmount: Double,
+                                     monthlyDCA: Double,
+                                     initialDateOfInvestment: Int) -> Double {
         
         var totalAmount = Double()
         totalAmount += initialInvestmentAmount
@@ -24,6 +46,33 @@ struct DCAService {
         totalAmount += dcaAmount
         
         return totalAmount
+    }
+    
+    private func getCurrentValue(numberOfShares: Double, latestSharePrice: Double) -> Double {
+        return numberOfShares * latestSharePrice
+    }
+    
+    private func getAnnualReturn(currentValue: Double, investmentAmount: Double, initialDateOfInvestment: Int) -> Double {
+        let rate = currentValue / investmentAmount
+        let years = (initialDateOfInvestment.doubleValue + 1) / 12
+        let result = pow(rate, (1 / years)) - 1
+        return result
+    }
+    
+    private func getLatestSharePrice(asset: Asset) -> Double {
+        return asset.timeSeriesMonthlyAdjusted.getMonthInfo().first?.adjustedClose ?? 0
+    }
+    
+    private func getNumberOfShares(asset: Asset, initialInvestmentAmount: Double, monthlyDCA: Double, initialDateOfInvestment: Int) -> Double {
+        var totalShares = Double()
+        let initialInvestmentOpenPrice = asset.timeSeriesMonthlyAdjusted.getMonthInfo()[initialDateOfInvestment].adjustedOpen
+        let initialInvestmentShares = initialInvestmentAmount / initialInvestmentOpenPrice
+        totalShares += initialInvestmentShares
+        asset.timeSeriesMonthlyAdjusted.getMonthInfo().prefix(initialDateOfInvestment).forEach { (monthInfo) in
+            let dcaInvestmentShares = monthlyDCA / monthInfo.adjustedOpen
+            totalShares += dcaInvestmentShares
+        }
+        return totalShares
     }
     
 }
@@ -35,5 +84,5 @@ struct DCAresult {
     let gain: Double
     let yield: Double
     let annualReturn: Double
-    
+    let isProfitable: Bool
 }

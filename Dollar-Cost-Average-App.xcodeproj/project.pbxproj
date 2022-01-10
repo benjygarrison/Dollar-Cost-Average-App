@@ -28,6 +28,7 @@
 		BAC0333D278BF44C00A73426 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0333C278BF44C00A73426 /* Int+Extensions.swift */; };
 		BAC0333F278C147C00A73426 /* DCAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0333E278C147C00A73426 /* DCAService.swift */; };
 		BAC03341278C185E00A73426 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03340278C185E00A73426 /* Double+Extensions.swift */; };
+		BAC03343278C97A500A73426 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03342278C97A500A73426 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		BAC0333C278BF44C00A73426 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		BAC0333E278C147C00A73426 /* DCAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAService.swift; sourceTree = "<group>"; };
 		BAC03340278C185E00A73426 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		BAC03342278C97A500A73426 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C51892A3450F9929E40552C1 /* Pods-Dollar-Cost-Average-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dollar-Cost-Average-App.release.xcconfig"; path = "Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App.release.xcconfig"; sourceTree = "<group>"; };
 		DFE8162D03EF3CF3DC9FA275 /* Pods_Dollar_Cost_Average_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dollar_Cost_Average_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 				BAC0333A278BEC1600A73426 /* Date+ Extensions.swift */,
 				BAC0333C278BF44C00A73426 /* Int+Extensions.swift */,
 				BAC03340278C185E00A73426 /* Double+Extensions.swift */,
+				BAC03342278C97A500A73426 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				BAC0330C278A566F00A73426 /* AppDelegate.swift in Sources */,
 				BAC03339278BE0DD00A73426 /* DateSelectionTableViewController.swift in Sources */,
 				BAC03332278BBF4E00A73426 /* CalculatorTableViewController.swift in Sources */,
+				BAC03343278C97A500A73426 /* String+Extensions.swift in Sources */,
 				BAC0330E278A566F00A73426 /* SceneDelegate.swift in Sources */,
 				BAC0333D278BF44C00A73426 /* Int+Extensions.swift in Sources */,
 				BAC0333B278BEC1600A73426 /* Date+ Extensions.swift in Sources */,
