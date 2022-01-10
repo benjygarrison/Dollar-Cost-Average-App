@@ -11,9 +11,19 @@ struct DCAService {
     
     func calculate(initialInvestmentAmount: Double, monthlyDCA: Double, initialDateOfInvestment: Int) -> DCAresult {
         
+        let investmentAmount = getInvestmentAmount(initialInvestmentAmount: initialInvestmentAmount, monthlyDCA: monthlyDCA, initialDateOfInvestment: initialDateOfInvestment)
         
+        return .init(currentValue: 0, investmentAmount: investmentAmount, gain: 0, yield: 0, annualReturn: 0)
+    }
+    
+    private func getInvestmentAmount(initialInvestmentAmount: Double, monthlyDCA: Double, initialDateOfInvestment: Int) -> Double {
         
-        return .init(currentValue: 0, investmentAmount: 0, gain: 0, yield: 0, annualReturn: 0)
+        var totalAmount = Double()
+        totalAmount += initialInvestmentAmount
+        let dcaAmount = initialDateOfInvestment.doubleValue * monthlyDCA
+        totalAmount += dcaAmount
+        
+        return totalAmount
     }
     
 }
