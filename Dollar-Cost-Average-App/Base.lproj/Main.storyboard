@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="2130" y="47"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Calculator Table View Controller-->
         <scene sceneID="FJA-OZ-Yl1">
             <objects>
-                <tableViewController id="Nyx-ys-SfN" sceneMemberID="viewController">
+                <tableViewController id="Nyx-ys-SfN" customClass="CalculatorTableViewController" customModule="Dollar_Cost_Average_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="sel-3S-c52">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -420,6 +420,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ZLg-qy-eYX"/>
                     <connections>
+                        <outlet property="assetNameLabel" destination="05x-hb-vKc" id="BWy-v0-TGe"/>
+                        <outlet property="symbolLabel" destination="aoD-Zo-J0B" id="JOe-Md-m91"/>
                         <segue destination="diG-GZ-d6b" kind="show" id="SoQ-bH-Aa6"/>
                     </connections>
                 </tableViewController>

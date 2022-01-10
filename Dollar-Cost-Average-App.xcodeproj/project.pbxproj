@@ -20,6 +20,8 @@
 		BAC0332A278A6DA000A73426 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03329278A6DA000A73426 /* SearchResults.swift */; };
 		BAC0332C278A9CD300A73426 /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0332B278A9CD300A73426 /* SearchPlaceholderView.swift */; };
 		BAC03330278B8B3E00A73426 /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0332F278B8B3E00A73426 /* TimeSeriesMonthlyAdjusted.swift */; };
+		BAC03332278BBF4E00A73426 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03331278BBF4E00A73426 /* CalculatorTableViewController.swift */; };
+		BAC03334278BC01800A73426 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03333278BC01800A73426 /* Asset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		BAC03329278A6DA000A73426 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		BAC0332B278A9CD300A73426 /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
 		BAC0332F278B8B3E00A73426 /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
+		BAC03331278BBF4E00A73426 /* CalculatorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewController.swift; sourceTree = "<group>"; };
+		BAC03333278BC01800A73426 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		C51892A3450F9929E40552C1 /* Pods-Dollar-Cost-Average-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dollar-Cost-Average-App.release.xcconfig"; path = "Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App.release.xcconfig"; sourceTree = "<group>"; };
 		DFE8162D03EF3CF3DC9FA275 /* Pods_Dollar_Cost_Average_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dollar_Cost_Average_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				BAC0330F278A566F00A73426 /* SearchTableViewController.swift */,
+				BAC03331278BBF4E00A73426 /* CalculatorTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			children = (
 				BAC03329278A6DA000A73426 /* SearchResults.swift */,
 				BAC0332F278B8B3E00A73426 /* TimeSeriesMonthlyAdjusted.swift */,
+				BAC03333278BC01800A73426 /* Asset.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,10 +265,12 @@
 			files = (
 				BAC03310278A566F00A73426 /* SearchTableViewController.swift in Sources */,
 				BAC0332A278A6DA000A73426 /* SearchResults.swift in Sources */,
+				BAC03334278BC01800A73426 /* Asset.swift in Sources */,
 				BAC03327278A6B3100A73426 /* APIService.swift in Sources */,
 				BAC03330278B8B3E00A73426 /* TimeSeriesMonthlyAdjusted.swift in Sources */,
 				BAC03324278A667400A73426 /* SearchTableViewCell.swift in Sources */,
 				BAC0330C278A566F00A73426 /* AppDelegate.swift in Sources */,
+				BAC03332278BBF4E00A73426 /* CalculatorTableViewController.swift in Sources */,
 				BAC0330E278A566F00A73426 /* SceneDelegate.swift in Sources */,
 				BAC0332C278A9CD300A73426 /* SearchPlaceholderView.swift in Sources */,
 			);
