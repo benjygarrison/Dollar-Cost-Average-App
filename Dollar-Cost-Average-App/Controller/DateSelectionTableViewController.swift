@@ -9,6 +9,9 @@ import UIKit
 
 class DateSelectionTableViewController: UITableViewController {
     
+    //Skipped, checkmarks and slider (secs 7.32, 7.33, 7.34)
+    
+    
     var timeSeriesMonthlyAdjusted: TimeSeriesMonthlyAdjusted?
     private var monthInfo: [MonthInfo] = []
     var didSelectDate: ((Int) -> Void)?
