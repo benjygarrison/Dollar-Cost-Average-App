@@ -29,7 +29,18 @@
 		BAC0333F278C147C00A73426 /* DCAService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0333E278C147C00A73426 /* DCAService.swift */; };
 		BAC03341278C185E00A73426 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03340278C185E00A73426 /* Double+Extensions.swift */; };
 		BAC03343278C97A500A73426 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC03342278C97A500A73426 /* String+Extensions.swift */; };
+		BAC0334B278CD33900A73426 /* Dollar_Cost_Average_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0334A278CD33900A73426 /* Dollar_Cost_Average_AppTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAC0334C278CD33900A73426 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAC03300278A566F00A73426 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAC03307278A566F00A73426;
+			remoteInfo = "Dollar-Cost-Average-App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5B178E14332EA329BACD78E1 /* Pods-Dollar-Cost-Average-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dollar-Cost-Average-App.debug.xcconfig"; path = "Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +67,8 @@
 		BAC0333E278C147C00A73426 /* DCAService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCAService.swift; sourceTree = "<group>"; };
 		BAC03340278C185E00A73426 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		BAC03342278C97A500A73426 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		BAC03348278CD33900A73426 /* Dollar-Cost-Average-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dollar-Cost-Average-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAC0334A278CD33900A73426 /* Dollar_Cost_Average_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dollar_Cost_Average_AppTests.swift; sourceTree = "<group>"; };
 		C51892A3450F9929E40552C1 /* Pods-Dollar-Cost-Average-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dollar-Cost-Average-App.release.xcconfig"; path = "Target Support Files/Pods-Dollar-Cost-Average-App/Pods-Dollar-Cost-Average-App.release.xcconfig"; sourceTree = "<group>"; };
 		DFE8162D03EF3CF3DC9FA275 /* Pods_Dollar_Cost_Average_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dollar_Cost_Average_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -66,6 +79,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9226F3E4964B38620765F18E /* Pods_Dollar_Cost_Average_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC03345278CD33900A73426 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +114,7 @@
 			children = (
 				BAC0331F278A56B300A73426 /* Podfile */,
 				BAC0330A278A566F00A73426 /* Dollar-Cost-Average-App */,
+				BAC03349278CD33900A73426 /* Dollar-Cost-Average-AppTests */,
 				BAC03309278A566F00A73426 /* Products */,
 				4583F1F6A31491795AD39B71 /* Pods */,
 				710F13159E84612B926C73A4 /* Frameworks */,
@@ -104,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				BAC03308278A566F00A73426 /* Dollar-Cost-Average-App.app */,
+				BAC03348278CD33900A73426 /* Dollar-Cost-Average-AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,6 +198,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		BAC03349278CD33900A73426 /* Dollar-Cost-Average-AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAC0334A278CD33900A73426 /* Dollar_Cost_Average_AppTests.swift */,
+			);
+			path = "Dollar-Cost-Average-AppTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +228,24 @@
 			productReference = BAC03308278A566F00A73426 /* Dollar-Cost-Average-App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BAC03347278CD33900A73426 /* Dollar-Cost-Average-AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAC0334E278CD33900A73426 /* Build configuration list for PBXNativeTarget "Dollar-Cost-Average-AppTests" */;
+			buildPhases = (
+				BAC03344278CD33900A73426 /* Sources */,
+				BAC03345278CD33900A73426 /* Frameworks */,
+				BAC03346278CD33900A73426 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAC0334D278CD33900A73426 /* PBXTargetDependency */,
+			);
+			name = "Dollar-Cost-Average-AppTests";
+			productName = "Dollar-Cost-Average-AppTests";
+			productReference = BAC03348278CD33900A73426 /* Dollar-Cost-Average-AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -210,6 +258,10 @@
 				TargetAttributes = {
 					BAC03307278A566F00A73426 = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					BAC03347278CD33900A73426 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = BAC03307278A566F00A73426;
 					};
 				};
 			};
@@ -227,6 +279,7 @@
 			projectRoot = "";
 			targets = (
 				BAC03307278A566F00A73426 /* Dollar-Cost-Average-App */,
+				BAC03347278CD33900A73426 /* Dollar-Cost-Average-AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -240,6 +293,13 @@
 				BAC03315278A567200A73426 /* Assets.xcassets in Resources */,
 				BAC03320278A56B300A73426 /* Podfile in Resources */,
 				BAC03313278A566F00A73426 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAC03346278CD33900A73426 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +372,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BAC03344278CD33900A73426 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAC0334B278CD33900A73426 /* Dollar_Cost_Average_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAC0334D278CD33900A73426 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAC03307278A566F00A73426 /* Dollar-Cost-Average-App */;
+			targetProxy = BAC0334C278CD33900A73426 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BAC03311278A566F00A73426 /* Main.storyboard */ = {
@@ -510,6 +586,42 @@
 			};
 			name = Release;
 		};
+		BAC0334F278CD33900A73426 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UC8QT6XYPN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "benjigarrison.Dollar-Cost-Average-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dollar-Cost-Average-App.app/Dollar-Cost-Average-App";
+			};
+			name = Debug;
+		};
+		BAC03350278CD33900A73426 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UC8QT6XYPN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "benjigarrison.Dollar-Cost-Average-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dollar-Cost-Average-App.app/Dollar-Cost-Average-App";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,6 +639,15 @@
 			buildConfigurations = (
 				BAC0331D278A567200A73426 /* Debug */,
 				BAC0331E278A567200A73426 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAC0334E278CD33900A73426 /* Build configuration list for PBXNativeTarget "Dollar-Cost-Average-AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAC0334F278CD33900A73426 /* Debug */,
+				BAC03350278CD33900A73426 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
