@@ -133,7 +133,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dateLabel" destination="MoV-ek-2zs" id="6sp-xg-4hT"/>
+                                    <outlet property="monthLabel" destination="MoV-ek-2zs" id="6sp-xg-4hT"/>
                                     <outlet property="monthsAgoLabel" destination="TtT-Po-5vk" id="k8M-v6-VLd"/>
                                 </connections>
                             </tableViewCell>
