@@ -32,7 +32,7 @@ class SearchTableViewController: UITableViewController {
     private let apiService = APIService()
     private var searchResults: SearchResults?
     @Published private var mode: Mode = .onboarding // $ sets the listener
-    private var subscribers = Set<AnyCancellable>() // listener for var below
+    private var subscribers = Set<AnyCancellable>() // listener for var below, set with &subscribers
     @Published private var searchQuery = String()  // @Published makes the search query observable, $ sets the listener
     
     
