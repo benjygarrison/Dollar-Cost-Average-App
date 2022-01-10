@@ -42,7 +42,7 @@ class SearchTableViewController: UITableViewController {
         
         establishNavBar()
         observeFormText()
-        establishTableView()
+        setUpTableView()
         
     }
     
@@ -54,7 +54,8 @@ class SearchTableViewController: UITableViewController {
     }
     
     
-    private func establishTableView() {
+    private func setUpTableView() {
+        tableView.isScrollEnabled = false
         tableView.tableFooterView = UIView()
     }
     
@@ -72,6 +73,7 @@ class SearchTableViewController: UITableViewController {
             } receiveValue: { (searchResults) in
                 self.searchResults = searchResults
                 self.tableView.reloadData()
+                self.tableView.isScrollEnabled = true
             }.store(in: &self.subscribers)
             print(searchQuery)
         }.store(in: &subscribers)
