@@ -62,7 +62,7 @@ class SearchTableViewController: UITableViewController {
     
     private func observeFormText() {
         
-        $searchQuery.debounce(for: .milliseconds(500), scheduler: RunLoop.main).sink { [unowned self] (searchQuery) in
+        $searchQuery.debounce(for: .milliseconds(250), scheduler: RunLoop.main).sink { [unowned self] (searchQuery) in
             guard !searchQuery.isEmpty else { return }
             self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
                 switch completion {
