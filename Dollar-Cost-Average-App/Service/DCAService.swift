@@ -10,6 +10,12 @@ import UIKit
 
 struct DCAService {
     
+    
+    //MARK: generic test function:
+    func performSubtraction(num1: Int, num2: Int) -> Int {
+        return num1 - num2
+    }
+    
     func calculate(asset: Asset, initialInvestmentAmount: Double, monthlyDCA: Double, initialDateOfInvestment: Int) -> DCAresult {
         
         let investmentAmount = getInvestmentAmount(initialInvestmentAmount: initialInvestmentAmount, monthlyDCA: monthlyDCA, initialDateOfInvestment: initialDateOfInvestment)
@@ -36,7 +42,7 @@ struct DCAService {
                      isProfitable: isProfitable)
     }
     
-    private func getInvestmentAmount(initialInvestmentAmount: Double,
+    func getInvestmentAmount(initialInvestmentAmount: Double,
                                      monthlyDCA: Double,
                                      initialDateOfInvestment: Int) -> Double {
         
